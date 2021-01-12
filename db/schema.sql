@@ -1,5 +1,6 @@
    ### Schema
-DROP DATABASE burgers_db;
+
+--Uncomment to delete Database-- DROP DATABASE burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
 
