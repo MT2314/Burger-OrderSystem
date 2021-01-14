@@ -9,7 +9,7 @@
         {{#each burgers}}
         {{#unless devoured}}
         <div class="burgerBox bg-primary">
-            <div class="p-1 text-white">{{burger_name}}
+            <div class="p-1 text-white"><i>{{id}})</i>  <b>{{burger_name}}</b>
             </div>
             <button type="button " class="devourBtn btn btn-warning btn-large change-devoured" data-id="{{id}}">Devour
             </button>
@@ -23,7 +23,7 @@
         {{#each burgers}}
         {{#if devoured}}
         <div class="burgerBox bg-danger">
-            <div class=" p-1 text-white">{{burger_name}}
+            <div class=" p-1 text-white"><i>{{id}})</i>  <b>{{burger_name}}</b>
             </div>
             <button class="delete-burger devourBtn btn btn-danger btn-large" data-id="{{this.id}}">DELETE!
             </button>

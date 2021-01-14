@@ -11,6 +11,29 @@ const printQuestionMarks = (num) => {
   return arr.toString();
 };
 
+const resetAutoIncrement = ((cb) => {
+  connection.query(
+    `SELECT MAX(id) FROM burgers`,
+    ((err, res) => {
+      if (err) throw err;
+      let maxarr = Object.values(res[0]);
+      let max;
+      if (maxarr[0]) {
+        max = maxarr[0];
+      }
+      else {
+        max = 0;
+      }
+      connection.query(
+        `ALTER TABLE burgers AUTO_INCREMENT = ${max}`,
+        ((err) => {
+          if (err) throw err;
+        })
+      )
+    })
+  );
+});
+
 const objToSql = (ob) => {
   const arr = [];
 
@@ -85,9 +108,11 @@ const orm = {
         throw err;
       }
 
+      resetAutoIncrement();
       cb(result);
     });
   },
+
 };
 
 module.exports = orm;
