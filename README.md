@@ -7,6 +7,8 @@
 </br>
     
 >Link to github repository https://github.com/MT2314/Burger-OrderSystem
+#### Deployed App Link
+>https://burger-ordersystem.herokuapp.com/
     
 <img src= "public\assets\img\appScreenshot.jpg" alt="Burger Order System Screenshot" width="600"/>
     
@@ -35,6 +37,9 @@ HTML , CSS , Javascript , Handlebars , MySQL , Node , Express
 
 ### Usage Guide
 ---
+### Heroku
+>https://burger-ordersystem.herokuapp.com/
+#### If you have files and node
 > start with 
 > -- node server.js
 
