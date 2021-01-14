@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           },
 
           // make sure to serialize the JSON body
-          body: JSON.stringify(newSleepState),
+          body: JSON.stringify(newDevouredState),
         }).then((response) => {
           // Check that the response is all good
           // Reload the page so the user can see the new quote
@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   if (createBurgerBtn) {
     createBurgerBtn.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
         burger_name: document.getElementById('ca').value.trim(),
         devoured: false,
@@ -75,25 +73,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     });
   }
-
-  // DELETE
-  const deleteBurgerBtns = document.querySelectorAll('.delete-cat');
-
-  // Set up the event listeners for each delete button
-  deleteBurgerBtns.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const id = e.target.getAttribute('data-id');
-
-      // Send the delete request
-      fetch(`/api/burger/${id}`, {
-        method: 'DELETE',
-      }).then((res) => {
-        console.log(res);
-        console.log(`Deleted burger: ${id}`);
-
-        // Reload the page
-        location.reload();
-      });
-    });
-  });
 });

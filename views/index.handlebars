@@ -9,7 +9,10 @@
         {{#each burgers}}
         {{#unless devoured}}
         <div class="p-1 bg-primary text-white burgerBox">{{burger_name}}
-            <button type="button " class="devourBtn btn btn-warning btn-large">Devour</button>
+            <button type="button " class="devourBtn btn btn-warning btn-large change-devoured" data-id="{{id}}"
+                data-newDevoured="{{sleep}}">Devour</button>
+
+
         </div>
         {{/unless}}
         {{/each}}
@@ -39,7 +42,7 @@
     </form>
 </div>
 
-  {{!-- <div class="form-group">
+{{!-- <div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div> --}}
+</div> --}}

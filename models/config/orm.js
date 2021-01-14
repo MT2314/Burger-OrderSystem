@@ -61,7 +61,7 @@ const orm = {
     let queryString = `UPDATE ${table}`;
 
     queryString += ' SET ';
-    queryString += objToSql(objColVals);
+    queryString += "devoured = true";
     queryString += ' WHERE ';
     queryString += condition;
 
@@ -73,20 +73,7 @@ const orm = {
 
       cb(result);
     });
-  },
-  delete(table, condition, cb) {
-    let queryString = `DELETE FROM ${table}`;
-    queryString += ' WHERE ';
-    queryString += condition;
-
-    connection.query(queryString, (err, result) => {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
+  }
 };
 
 module.exports = orm;
