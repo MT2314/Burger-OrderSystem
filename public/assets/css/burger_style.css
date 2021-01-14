@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    /* background-color:black; */
+}
+
+.burger-img{
+    height:25vh;
+}
+/* Header */
+.header{
+    text-align: center;
+}
+
+/* Burger */
+.burgerBox{
+    
+    margin-left:10%;
+    font-size:20px;
+}
+
+/* Devoured Button */
+.devourBtn{
+    position:absolute;
+    margin-left:10%;
+    /* height:5vh; */
+}
+
+.postBurger{
+    width:50vw;
+    border:solid;
+    margin-top:5vh;
+    margin-left:25vw;
+    text-align:center;
+}
+
