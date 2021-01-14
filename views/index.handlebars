@@ -4,22 +4,23 @@
 </div>
 
 <div class="row">
-    <div class="col-sm">
+    <div class="col-sm .d-inline-flex ordered-burgerCol">
         <h2 class="text-center header2">Ordered Burgers</h2>
         {{#each burgers}}
         {{#unless devoured}}
-        <div class="p-1 bg-primary text-white burgerBox">{{burger_name}}
+        <div class="burgerBox bg-primary">
+            <div class="p-1 text-white">{{burger_name}}
+            </div>
             <button type="button " class="devourBtn btn btn-warning btn-large change-devoured" data-id="{{id}}"
-                data-newDevoured="{{sleep}}">Devour</button>
-
-
+                data-newDevoured="{{sleep}}">Devour
+            </button>
         </div>
         {{/unless}}
         {{/each}}
 
     </div>
     <div class="col-sm">
-        <h2 class="text-center header2, devoured">Devoured Burgers</h2>
+        <h2 class=" text-center header2, devoured">Devoured Burgers</h2>
         {{#each burgers}}
         {{#if devoured}}
         <div class="d-block text-center p-1 bg-danger text-white burgerBox">{{burger_name}}</div>

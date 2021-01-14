@@ -17,18 +17,17 @@ body{
 
 /* Burger */
 .burgerBox{
-    
-    margin-left:10%;
-    font-size:20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ordered-burgerCol{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 
-/* Devoured Button */
-.devourBtn{
-    position:absolute;
-    margin-left:10%;
-    /* height:5vh; */
-}
-
+/* Post */
 .postBurger{
     width:50vw;
     border:solid;
@@ -36,4 +35,3 @@ body{
     margin-left:25vw;
     text-align:center;
 }
-
