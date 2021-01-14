@@ -4,7 +4,7 @@
 </div>
 
 <div class="row">
-    <div class="col-sm .d-inline-flex ordered-burgerCol">
+    <div class="col-sm .d-inline-flex">
         <h2 class="text-center header2">Ordered Burgers</h2>
         {{#each burgers}}
         {{#unless devoured}}
@@ -18,31 +18,31 @@
         {{/each}}
 
     </div>
-    <div class="col-sm">
+    <div class="col-sm ">
         <h2 class=" text-center header2, devoured">Devoured Burgers</h2>
         {{#each burgers}}
         {{#if devoured}}
-        <div class="d-block text-center p-1 bg-danger text-white burgerBox">{{burger_name}}</div>
+        <div class="burgerBox bg-danger">
+            <div class=" p-1 text-white">{{burger_name}}
+            </div>
+            <button class="delete-burger devourBtn btn btn-danger btn-large" data-id="{{this.id}}">DELETE!
+            </button>
+        </div>
         {{/if}}
         {{/each}}
     </div>
 </div>
 
 
+    <div class="postBurger">
+        <form class="form" id="create-form">
+            <h2 class="header2 addBurgerH2">Add a Burger</h2>
 
-<div class="card postBurger">
-    <form class="form" id="create-form">
-        <h2 class="header2 addBurgerH2">Add a Burger</h2>
+            <div class="form-group">
+                <label for="ca">Burger Name:</label>
+                <input class="form-control" type="text" id="ca" name="name">
+            </div>
+            <button type="submit">Add Burger</button>
+        </form>
+    </div>
 
-        <div class="form-group">
-            <label for="ca">Burger Name:</label>
-            <input class="form-control" type="text" id="ca" name="name">
-        </div>
-        <button type="submit">Add Burger</button>
-    </form>
-</div>
-
-{{!-- <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div> --}}
