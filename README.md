@@ -8,7 +8,7 @@
     
 >Link to github repository https://github.com/MT2314/Burger-OrderSystem
     
-<img src= "public\assets\img\burger.jpg" alt="Burger Order System Screenshot" width="600"/>
+<img src= "public\assets\img\appScreenshot.jpg" alt="Burger Order System Screenshot" width="600"/>
     
 ## Description
 ---
